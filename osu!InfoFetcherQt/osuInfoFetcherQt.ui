@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>osuInfoFetcherQtClass</class>
+ <widget class="QMainWindow" name="osuInfoFetcherQtClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>osuInfoFetcherQt</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="username">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>22</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pp">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>115</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fetchButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>50</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fetch</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>118</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>pp:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>22</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mode:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="mode">
+    <property name="geometry">
+     <rect>
+      <x>308</x>
+      <y>20</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>osu!</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Taiko</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Catch the Beat</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>osu!mania</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="rank_global">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>143</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>146</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Global Ranking:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>174</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Country Ranking:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="rank_country">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>171</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="date_join">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>87</y>
+      <width>281</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Join date:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>202</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ranked Score:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="score_ranked">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>199</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="score_total">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>227</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total Score:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="accuracy">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>255</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>258</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Accuracy:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_ssh">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>115</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>118</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SSH:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>146</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SS:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_ss">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>143</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>174</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SH:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_sh">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>171</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>202</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_s">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>199</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>229</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="count_a">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>226</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>290</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Debug Output:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="debug">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>320</y>
+      <width>401</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>460</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionAPI_Key"/>
+    <addaction name="actionUpdate_Duration"/>
+   </widget>
+   <addaction name="menuSettings"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAPI_Key">
+   <property name="text">
+    <string>API Key</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Duration">
+   <property name="text">
+    <string>Update Duration</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="osuInfoFetcherQt.qrc"/>
+ </resources>
+ <connections/>
+</ui>

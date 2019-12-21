@@ -27,7 +27,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_username">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -38,19 +38,6 @@
     </property>
     <property name="text">
      <string>Username:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="pp">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>115</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="fetchButton">
@@ -66,20 +53,7 @@
      <string>Fetch</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>118</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>pp:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_mode">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -122,313 +96,384 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="rank_global">
+   <widget class="QGroupBox" name="output">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>143</y>
-      <width>113</width>
-      <height>20</height>
+      <x>20</x>
+      <y>79</y>
+      <width>421</width>
+      <height>441</height>
      </rect>
     </property>
-    <property name="readOnly">
-     <bool>true</bool>
+    <property name="title">
+     <string>Output</string>
     </property>
+    <widget class="QLabel" name="label_rank_country">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>107</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Country Ranking:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rank_global">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>76</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="date_join">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>281</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_sh">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>104</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="score_ranked">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>132</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ssh">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>51</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SSH:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rank_country">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>104</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_ssh">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>48</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="score_total">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>160</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sh">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>107</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SH:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_ss">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>76</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_date_join">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>23</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Join date:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_a">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>159</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_s">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>132</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_rank_global">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>79</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Global Ranking:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_score_total">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>163</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Total Score:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ss">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>79</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SS:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_score_ranked">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>135</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ranked Score:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_pp">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>51</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>pp:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_accuracy">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>191</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Accuracy:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>162</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>A:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="pp">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>48</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="accuracy">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>188</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_s">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>135</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>S:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="debug">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>401</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_debug">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Debug:</string>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QCheckBox" name="AutoFetching">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>146</y>
+      <x>273</x>
+      <y>53</y>
       <width>81</width>
-      <height>16</height>
+      <height>17</height>
      </rect>
     </property>
     <property name="text">
-     <string>Global Ranking:</string>
+     <string>Auto fetch</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QSpinBox" name="fetchInterval">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>174</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Country Ranking:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="rank_country">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>171</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="date_join">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>87</y>
-      <width>281</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>90</y>
+      <x>350</x>
+      <y>50</y>
       <width>51</width>
-      <height>16</height>
+      <height>22</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Join date:</string>
+    <property name="suffix">
+     <string/>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>202</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
+    <property name="minimum">
+     <number>3</number>
     </property>
-    <property name="text">
-     <string>Ranked Score:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="score_ranked">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>199</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="score_total">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>227</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>230</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Total Score:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="accuracy">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>255</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>258</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Accuracy:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="count_ssh">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>115</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>118</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SSH:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>146</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SS:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="count_ss">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>143</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>174</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SH:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="count_sh">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>171</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_13">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>202</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>S:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="count_s">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>199</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>229</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>A:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="count_a">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>226</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>290</y>
-      <width>91</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Debug Output:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="debug">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>320</y>
-      <width>401</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
+    <property name="maximum">
+     <number>60</number>
     </property>
    </widget>
   </widget>
@@ -441,14 +486,6 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuSettings">
-    <property name="title">
-     <string>Settings</string>
-    </property>
-    <addaction name="actionAPI_Key"/>
-    <addaction name="actionUpdate_Duration"/>
-   </widget>
-   <addaction name="menuSettings"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

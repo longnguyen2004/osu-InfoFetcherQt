@@ -16,8 +16,10 @@ private:
 	Ui::osuInfoFetcherQtClass ui;
 	QNetworkAccessManager* api_req_manager;
 	QNetworkReply* data;
+	QTimer* timer;
 
 public slots:
 	void onFetch();
 	void onDataReceive();
+	void initAutoFetch(bool enabled);
 };

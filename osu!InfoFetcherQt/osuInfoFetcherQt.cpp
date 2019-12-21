@@ -8,6 +8,23 @@
 QString APIKey;
 QFile* APIKey_File;
 
+void osuInfoFetcherQt::initAutoFetch(bool enabled)
+{
+	if (enabled)
+	{
+		ui.fetchInterval->setDisabled(true);
+		ui.fetchButton->setDisabled(true);
+		timer->setInterval(ui.fetchInterval->value()*1000);
+		timer->start();
+	}
+	else
+	{
+		ui.fetchInterval->setDisabled(false);
+		ui.fetchButton->setDisabled(false);
+		timer->stop();
+	}
+}
+
 void osuInfoFetcherQt::onFetch()
 {
 	QString username = ui.username->text();
@@ -48,6 +65,13 @@ osuInfoFetcherQt::osuInfoFetcherQt(QWidget *parent)
 	api_req_manager = new QNetworkAccessManager(this);
 	api_req_manager->connectToHostEncrypted("https://osu.ppy.sh");
 	ui.setupUi(this);
+	ui.fetchButton->setDefault(true);
+	timer = new QTimer(this);
+	ui.menuBar->addAction("API Key", [this]()
+		{
+			QDialog* dialog = new APIKeyEntry();
+			dialog->exec();
+		});
 	APIKey_File = new QFile("apikey.key", this);
 	if (APIKey_File->exists())
 	{
@@ -56,14 +80,8 @@ osuInfoFetcherQt::osuInfoFetcherQt(QWidget *parent)
 		APIKey = st.readAll();
 		APIKey_File->close();
 	}
-	connect(ui.menuSettings, &QMenu::triggered, [this](const QAction* action)
-		{
-			QDialog *dialog;
-			if (action == ui.actionAPI_Key)
-			{
-				dialog = new APIKeyEntry(this);
-				dialog->exec();
-			}
-		});
+	ui.fetchInterval->setSuffix("s");
 	connect(ui.fetchButton, &QPushButton::pressed, this, &osuInfoFetcherQt::onFetch);
+	connect(timer, &QTimer::timeout, this, &osuInfoFetcherQt::onFetch);
+	connect(ui.AutoFetching, &QCheckBox::toggled, this, &osuInfoFetcherQt::initAutoFetch);
 }

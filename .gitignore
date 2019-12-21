@@ -41,3 +41,4 @@ osu!InfoFetcherQt/apikey.key
 *.pdb
 *.ilk
 x64/Release/apikey.key
+*.zip

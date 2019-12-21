@@ -8,6 +8,7 @@ APIKeyEntry::APIKeyEntry(QWidget *parent)
 	ui.setupUi(this);
 	connect(ui.okButton, &QPushButton::pressed, this, &APIKeyEntry::onOKbutton);
 	ui.apikey_entry->setText(APIKey);
+	this->setAttribute(Qt::WA_DeleteOnClose);
 }
 
 APIKeyEntry::~APIKeyEntry()
